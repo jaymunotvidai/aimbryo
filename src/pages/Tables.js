@@ -3,8 +3,9 @@ import React from 'react'
 import addIcon from '../assets/images/addIcon.svg'
 import filterIcon from '../assets/images/filterIcon.svg'
 import { Link } from 'react-router-dom';
-
 import TableComponent from '../components/ReusableComponents/TableComponent';
+import ArrowLeft from '../assets/images/arrow-square-left.svg'
+import ArrowRight from '../assets/images/arrow-square-right.svg'
 
 
 const tableData = [
@@ -111,7 +112,7 @@ const tableData = [
     accession: '987XYZ',
     doctor: 'Dr. Strange',
     status: 'Pending',
-  },  {
+  }, {
     name: 'Jane Cooper',
     mrNo: 'XYZ12345678',
     gender: 'Male',
@@ -199,6 +200,19 @@ export default function Tables() {
 
         <div className='m-2 flex-grow-1' style={{ overflow: 'auto' }}>
           <TableComponent data={tableData} />
+          <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-end">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1"><img src={ArrowLeft} alt="uploadTable" /></a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#"><img src={ArrowRight} alt="uploadTable" /></a>
+              </li>
+            </ul>
+          </nav>
         </div>
 
 

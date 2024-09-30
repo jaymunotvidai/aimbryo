@@ -3524,3 +3524,8 @@ button.stacked-button span {
   font-weight: 600;
   line-height: 1.125rem;
 }
+
+.page-link, .page-item.disabled .page-link {
+  background-color: white;
+  border-color: white;
+}

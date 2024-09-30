@@ -21,8 +21,7 @@ const eChart = {
       bar: {
         horizontal: false,
         columnWidth: "30%",
-        borderRadius: 10,               // Border radius applied
-        borderRadiusApplication: "end", // Applies the radius only at the top
+        borderRadius: 10, 
       },
     },
     dataLabels: {

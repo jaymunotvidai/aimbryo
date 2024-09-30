@@ -42,7 +42,6 @@ const eChart3 = {
           horizontal: true,
           columnWidth: "30%",
           borderRadius: 10,
-          borderRadiusApplication: "end",
           barHeight: "70%",
         },
       },

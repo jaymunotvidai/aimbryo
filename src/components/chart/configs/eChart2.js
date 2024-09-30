@@ -76,6 +76,13 @@ const eChart2 = {
           },
         },
       },
+      states: {
+        hover: {
+          filter: {
+            type: "none", // Disable any hover filter effect
+          },
+        },
+      },
     },
   };
   

@@ -12,7 +12,6 @@ const eChart = {
       type: "bar",
       width: "100%",
       height: "auto",
-
       toolbar: {
         show: false,
       },
@@ -21,7 +20,8 @@ const eChart = {
       bar: {
         horizontal: false,
         columnWidth: "30%",
-        borderRadius: 10, 
+        borderRadius: 10,
+        distributed: false, // This prevents individual bar styling on hover
       },
     },
     dataLabels: {
@@ -68,11 +68,18 @@ const eChart = {
         color: '#f2f2f3',
       },
     },
-
     tooltip: {
       y: {
         formatter: function (val) {
           return "$ " + val + " thousands";
+        },
+      },
+    },
+    // Disable hover effect
+    states: {
+      hover: {
+        filter: {
+          type: "none", // Disable any hover filter effect
         },
       },
     },

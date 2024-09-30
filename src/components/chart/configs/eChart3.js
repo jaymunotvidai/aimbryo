@@ -90,6 +90,13 @@ const eChart3 = {
           },
         },
       },
+      states: {
+        hover: {
+          filter: {
+            type: "none", // Disable any hover filter effect
+          },
+        },
+      },
       legend: {
         show: false, // Hide the legend
       },

@@ -21,6 +21,9 @@ const radialChart = {
         fill: {
             colors: ['#37C577', '#3768C5', '#EC9D3E', '#C5B037'], // Customize the colors
         },
+        stroke: {
+            lineCap: 'round'
+          },
         legend: {
             show: false,
             position: 'top', // Position the legend at the top

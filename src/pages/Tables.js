@@ -4,15 +4,123 @@ import addIcon from '../assets/images/addIcon.svg'
 import filterIcon from '../assets/images/filterIcon.svg'
 import { Link } from 'react-router-dom';
 
-
-import viewTable from '../assets/images/viewTable.svg';
-import uploadTable from '../assets/images/uploadTable.svg';
-import completedTable from "../assets/images/completedTable.svg";
-import pendingTable from '../assets/images/pendingTable.svg'
+import TableComponent from '../components/ReusableComponents/TableComponent';
 
 
+const tableData = [
+  {
+    name: 'Ralph Edwards',
+    mrNo: 'SDF45678543',
+    gender: 'Female',
+    accession: '123RND',
+    doctor: 'Cody Fisher',
+    status: 'Completed',
+  },
+  {
+    name: 'Jane Cooper',
+    mrNo: 'XYZ12345678',
+    gender: 'Male',
+    accession: '987XYZ',
+    doctor: 'Dr. Strange',
+    status: 'Pending',
+  },
+  {
+    name: 'Jane Cooper',
+    mrNo: 'XYZ12345678',
+    gender: 'Male',
+    accession: '987XYZ',
+    doctor: 'Dr. Strange',
+    status: 'Pending',
+  },
+  {
+    name: 'Jane Cooper',
+    mrNo: 'XYZ12345678',
+    gender: 'Male',
+    accession: '987XYZ',
+    doctor: 'Dr. Strange',
+    status: 'Pending',
+  },
+  {
+    name: 'Jane Cooper',
+    mrNo: 'XYZ12345678',
+    gender: 'Male',
+    accession: '987XYZ',
+    doctor: 'Dr. Strange',
+    status: 'Pending',
+  },
+  {
+    name: 'Jane Cooper',
+    mrNo: 'XYZ12345678',
+    gender: 'Male',
+    accession: '987XYZ',
+    doctor: 'Dr. Strange',
+    status: 'Pending',
+  },
+  {
+    name: 'Jane Cooper',
+    mrNo: 'XYZ12345678',
+    gender: 'Male',
+    accession: '987XYZ',
+    doctor: 'Dr. Strange',
+    status: 'Pending',
+  },
+  {
+    name: 'Jane Cooper',
+    mrNo: 'XYZ12345678',
+    gender: 'Male',
+    accession: '987XYZ',
+    doctor: 'Dr. Strange',
+    status: 'Pending',
+  },
+  {
+    name: 'Jane Cooper',
+    mrNo: 'XYZ12345678',
+    gender: 'Male',
+    accession: '987XYZ',
+    doctor: 'Dr. Strange',
+    status: 'Pending',
+  },
+  {
+    name: 'Jane Cooper',
+    mrNo: 'XYZ12345678',
+    gender: 'Male',
+    accession: '987XYZ',
+    doctor: 'Dr. Strange',
+    status: 'Pending',
+  },
+  {
+    name: 'Jane Cooper',
+    mrNo: 'XYZ12345678',
+    gender: 'Male',
+    accession: '987XYZ',
+    doctor: 'Dr. Strange',
+    status: 'Pending',
+  },
+  {
+    name: 'Jane Cooper',
+    mrNo: 'XYZ12345678',
+    gender: 'Male',
+    accession: '987XYZ',
+    doctor: 'Dr. Strange',
+    status: 'Completed',
+  },
+  {
+    name: 'Jane Cooper',
+    mrNo: 'XYZ12345678',
+    gender: 'Male',
+    accession: '987XYZ',
+    doctor: 'Dr. Strange',
+    status: 'Pending',
+  },  {
+    name: 'Jane Cooper',
+    mrNo: 'XYZ12345678',
+    gender: 'Male',
+    accession: '987XYZ',
+    doctor: 'Dr. Strange',
+    status: 'Pending',
+  },
 
-
+];
 
 const DashboardIcons = [
   { src: addIcon, alt: 'addIcon' },
@@ -89,243 +197,8 @@ export default function Tables() {
 
         </div>
 
-        <div className='m-2 flex-grow-1' style={{ overflow: 'auto' }} >
-          <table className="table table-hover">
-            <thead>
-              <tr className=' patientPara '>
-                <th scope="col">Patient Name, MR No., Gender</th>
-                <th scope="col">Accession#</th>
-                <th scope="col">Doctor</th>
-                <th scope="col">Notes</th>
-                <th scope="col">Upload Consent</th>
-                <th scope="col">Stim Report</th>
-                <th scope="col">Result</th>
-                <th scope="col">Report Data</th>
-                <th scope="col">Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className='customRow'>
-                <td>
-                  <p className='tableTitle m-0'>
-                    Ralph Edwards
-                  </p>
-                  <a className='tableTitle' href="/patient">SDF45678543 | Female</a>
-                </td>
-                <td className='tableTitle'>123RND</td>
-                <td className='tableTitle' >Cody Fisher</td>
-                <td className='p-1'>
-                  <img src={viewTable} alt="viewTable" />
-                </td>
-                <td className='p-1' > <img src={uploadTable} alt="uploadTable" /></td>
-                <td className='p-1' > <img src={viewTable} alt="viewTable" /></td>
-                <td className='tableTitle' >Released</td>
-                <td className='p-1'><img src={viewTable} alt="viewTable" /></td>
-                <td><img src={completedTable} alt="completedTable" /></td>
-              </tr>
-              <tr className='customRow'>
-                <td>
-                  <p className='tableTitle m-0'>
-                    Ralph Edwards
-                  </p>
-                  <a className='tableTitle' href="/patient">SDF45678543 | Female</a>
-                </td>
-                <td className='tableTitle'>123RND</td>
-                <td className='tableTitle' >Cody Fisher</td>
-                <td className='p-1'>
-                  <img src={viewTable} alt="viewTable" />
-                </td>
-                <td className='p-1' > <img src={uploadTable} alt="uploadTable" /></td>
-                <td className='p-1' > <img src={viewTable} alt="viewTable" /></td>
-                <td className='tableTitle' >Released</td>
-                <td className='p-1'><img src={viewTable} alt="viewTable" /></td>
-                <td><img src={pendingTable} alt="pendingTable" /></td>
-              </tr>
-              <tr className='customRow'>
-                <td>
-                  <p className='tableTitle m-0'>
-                    Ralph Edwards
-                  </p>
-                  <a className='tableTitle' href="/patient">SDF45678543 | Female</a>
-                </td>
-                <td className='tableTitle'>123RND</td>
-                <td className='tableTitle' >Cody Fisher</td>
-                <td className='p-1'>
-                  <img src={viewTable} alt="viewTable" />
-                </td>
-                <td className='p-1' > <img src={uploadTable} alt="uploadTable" /></td>
-                <td className='p-1' > <img src={viewTable} alt="viewTable" /></td>
-                <td className='tableTitle' >Released</td>
-                <td className='p-1'><img src={viewTable} alt="viewTable" /></td>
-                <td><img src={pendingTable} alt="pendingTable" /></td>
-              </tr>
-              <tr className='customRow'>
-                <td>
-                  <p className='tableTitle m-0'>
-                    Ralph Edwards
-                  </p>
-                  <a className='tableTitle' href="/patient">SDF45678543 | Female</a>
-                </td>
-                <td className='tableTitle'>123RND</td>
-                <td className='tableTitle' >Cody Fisher</td>
-                <td className='p-1'>
-                  <img src={viewTable} alt="viewTable" />
-                </td>
-                <td className='p-1' > <img src={uploadTable} alt="uploadTable" /></td>
-                <td className='p-1' > <img src={viewTable} alt="viewTable" /></td>
-                <td className='tableTitle' >Released</td>
-                <td className='p-1'><img src={viewTable} alt="viewTable" /></td>
-                <td><img src={completedTable} alt="completedTable" /></td>
-              </tr>
-              <tr className='customRow'>
-                <td>
-                  <p className='tableTitle m-0'>
-                    Ralph Edwards
-                  </p>
-                  <a className='tableTitle' href="/patient">SDF45678543 | Female</a>
-                </td>
-                <td className='tableTitle'>123RND</td>
-                <td className='tableTitle' >Cody Fisher</td>
-                <td className='p-1'>
-                  <img src={viewTable} alt="viewTable" />
-                </td>
-                <td className='p-1' > <img src={uploadTable} alt="uploadTable" /></td>
-                <td className='p-1' > <img src={viewTable} alt="viewTable" /></td>
-                <td className='tableTitle' >Released</td>
-                <td className='p-1'><img src={viewTable} alt="viewTable" /></td>
-                <td><img src={completedTable} alt="completedTable" /></td>
-              </tr>
-              <tr className='customRow'>
-                <td>
-                  <p className='tableTitle m-0'>
-                    Ralph Edwards
-                  </p>
-                  <a className='tableTitle' href="/patient">SDF45678543 | Female</a>
-                </td>
-                <td className='tableTitle'>123RND</td>
-                <td className='tableTitle' >Cody Fisher</td>
-                <td className='p-1'>
-                  <img src={viewTable} alt="viewTable" />
-                </td>
-                <td className='p-1' > <img src={uploadTable} alt="uploadTable" /></td>
-                <td className='p-1' > <img src={viewTable} alt="viewTable" /></td>
-                <td className='tableTitle' >Released</td>
-                <td className='p-1'><img src={viewTable} alt="viewTable" /></td>
-                <td><img src={pendingTable} alt="pendingTable" /></td>
-              </tr>
-              <tr className='customRow'>
-                <td>
-                  <p className='tableTitle m-0'>
-                    Ralph Edwards
-                  </p>
-                  <a className='tableTitle' href="/patient">SDF45678543 | Female</a>
-                </td>
-                <td className='tableTitle'>123RND</td>
-                <td className='tableTitle' >Cody Fisher</td>
-                <td className='p-1'>
-                  <img src={viewTable} alt="viewTable" />
-                </td>
-                <td className='p-1' > <img src={uploadTable} alt="uploadTable" /></td>
-                <td className='p-1' > <img src={viewTable} alt="viewTable" /></td>
-                <td className='tableTitle' >Released</td>
-                <td className='p-1'><img src={viewTable} alt="viewTable" /></td>
-                <td><img src={pendingTable} alt="pendingTable" /></td>
-              </tr>
-              <tr className='customRow'>
-                <td>
-                  <p className='tableTitle m-0'>
-                    Ralph Edwards
-                  </p>
-                  <a className='tableTitle' href="/patient">SDF45678543 | Female</a>
-                </td>
-                <td className='tableTitle'>123RND</td>
-                <td className='tableTitle' >Cody Fisher</td>
-                <td className='p-1'>
-                  <img src={viewTable} alt="viewTable" />
-                </td>
-                <td className='p-1' > <img src={uploadTable} alt="uploadTable" /></td>
-                <td className='p-1' > <img src={viewTable} alt="viewTable" /></td>
-                <td className='tableTitle' >Released</td>
-                <td className='p-1'><img src={viewTable} alt="viewTable" /></td>
-                <td><img src={completedTable} alt="completedTable" /></td>
-              </tr>
-              <tr className='customRow'>
-                <td>
-                  <p className='tableTitle m-0'>
-                    Ralph Edwards
-                  </p>
-                  <a className='tableTitle' href="/patient">SDF45678543 | Female</a>
-                </td>
-                <td className='tableTitle'>123RND</td>
-                <td className='tableTitle' >Cody Fisher</td>
-                <td className='p-1'>
-                  <img src={viewTable} alt="viewTable" />
-                </td>
-                <td className='p-1' > <img src={uploadTable} alt="uploadTable" /></td>
-                <td className='p-1' > <img src={viewTable} alt="viewTable" /></td>
-                <td className='tableTitle' >Released</td>
-                <td className='p-1'><img src={viewTable} alt="viewTable" /></td>
-                <td><img src={completedTable} alt="completedTable" /></td>
-              </tr>
-              <tr className='customRow'>
-                <td>
-                  <p className='tableTitle m-0'>
-                    Ralph Edwards
-                  </p>
-                  <a className='tableTitle' href="/patient">SDF45678543 | Female</a>
-                </td>
-                <td className='tableTitle'>123RND</td>
-                <td className='tableTitle' >Cody Fisher</td>
-                <td className='p-1'>
-                  <img src={viewTable} alt="viewTable" />
-                </td>
-                <td className='p-1' > <img src={uploadTable} alt="uploadTable" /></td>
-                <td className='p-1' > <img src={viewTable} alt="viewTable" /></td>
-                <td className='tableTitle' >Released</td>
-                <td className='p-1'><img src={viewTable} alt="viewTable" /></td>
-                <td><img src={pendingTable} alt="pendingTable" /></td>
-              </tr>
-              <tr className='customRow'>
-                <td>
-                  <p className='tableTitle m-0'>
-                    Ralph Edwards
-                  </p>
-                  <a className='tableTitle' href="/patient">SDF45678543 | Female</a>
-                </td>
-                <td className='tableTitle'>123RND</td>
-                <td className='tableTitle' >Cody Fisher</td>
-                <td className='p-1'>
-                  <img src={viewTable} alt="viewTable" />
-                </td>
-                <td className='p-1' > <img src={uploadTable} alt="uploadTable" /></td>
-                <td className='p-1' > <img src={viewTable} alt="viewTable" /></td>
-                <td className='tableTitle' >Released</td>
-                <td className='p-1'><img src={viewTable} alt="viewTable" /></td>
-                <td><img src={pendingTable} alt="pendingTable" /></td>
-              </tr>
-              <tr className='customRow'>
-                <td>
-                  <p className='tableTitle m-0'>
-                    Ralph Edwards
-                  </p>
-                  <a className='tableTitle' href="/patient">SDF45678543 | Female</a>
-                </td>
-                <td className='tableTitle'>123RND</td>
-                <td className='tableTitle' >Cody Fisher</td>
-                <td className='p-1'>
-                  <img src={viewTable} alt="viewTable" />
-                </td>
-                <td className='p-1' > <img src={uploadTable} alt="uploadTable" /></td>
-                <td className='p-1' > <img src={viewTable} alt="viewTable" /></td>
-                <td className='tableTitle' >Released</td>
-                <td className='p-1'><img src={viewTable} alt="viewTable" /></td>
-                <td><img src={completedTable} alt="completedTable" /></td>
-              </tr>
-
-
-
-            </tbody>
-          </table>
+        <div className='m-2 flex-grow-1' style={{ overflow: 'auto' }}>
+          <TableComponent data={tableData} />
         </div>
 
 

@@ -14,14 +14,14 @@ function EChart2() {
       setChartSeries([
         {
           name: "Total Patients",
-          data: [30, 40, 45, 50, 49, 60, 70]  
+          data: [30, 40, 45, 50, 49, 60]  
         }
       ]);
     } else if (buttonName === 'embryo') {
       setChartSeries([
         {
           name: "Total Embryo Graded",
-          data: [20, 30, 35, 40, 35, 50, 60]  
+          data: [20, 30, 35, 40, 35, 50]  
         }
       ]);
     }

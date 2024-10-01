@@ -91,7 +91,7 @@ function Home() {
 
         <Row gutter={[24, 0]}>
           {/* Left column for Echart and LineChart */}
-          <Col xs={24} sm={24} md={24} lg={7} xl={7} className="mb-24">
+          <Col xs={24} sm={24} md={24} lg={7} xl={7} className="mb-24" style={{paddingRight:'0px'}}>
             <Card bordered={false} className="criclebox">
             <Overview/>
 

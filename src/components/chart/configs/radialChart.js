@@ -1,5 +1,5 @@
 const radialChart = {
-    series: [95, 70, 30, 35], // Percentage values for radial bars
+    series: [95, 70, 30, 35], 
     options: {
         chart: {
             type: 'radialBar',
@@ -9,27 +9,28 @@ const radialChart = {
             radialBar: {
                 
                 hollow: {
-                    size: '35%', // Adjust the inner radius (hollow center)
+                    size: '35%', 
+                    background: '#f0f0f0',  
                 },
                 track: {
-                    background: '#fff', // Track background color
-                    strokeWidth: '100%', // Width of the track (the path behind the bar)
+                    background: '#fafafa',  
+                    strokeWidth: '100%',  
                 },
             },
         },
-        labels: ['Mobile apps', 'Websites'], // Labels for the radial bars
+        labels: ['Mobile apps', 'Websites'],  
         fill: {
-            colors: ['#37C577', '#3768C5', '#EC9D3E', '#C5B037'], // Customize the colors
+            colors: ['#37C577', '#3768C5', '#EC9D3E', '#C5B037'], 
         },
         stroke: {
             lineCap: 'round'
           },
         legend: {
             show: false,
-            position: 'top', // Position the legend at the top
+            position: 'top',  
         },
         tooltip: {
-            enabled: false, // Disable tooltips
+            enabled: false, 
         },
     },
 };

@@ -1,6 +1,6 @@
 import ReactApexChart from "react-apexcharts";
 import { Typography } from "antd";
-import stackedBarChart from "./configs/stackedBarChart"; // Import your stacked bar chart configuration
+import stackedBarChart from "./configs/stackedBarChart"; 
 
 function StackedBarChart() {
   const { Title } = Typography;

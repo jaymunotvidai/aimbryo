@@ -21,7 +21,7 @@ const eChart = {
         horizontal: false,
         columnWidth: "30%",
         borderRadius: 10,
-        distributed: false, // This prevents individual bar styling on hover
+        distributed: false,  
       },
     },
     dataLabels: {
@@ -75,11 +75,10 @@ const eChart = {
         },
       },
     },
-    // Disable hover effect
     states: {
       hover: {
         filter: {
-          type: "none", // Disable any hover filter effect
+          type: "none", 
         },
       },
     },

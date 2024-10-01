@@ -3,22 +3,22 @@ const stackedBarChart = {
       {
         name: "Product A",
         data: [150, 200, 100, 220, 300, 100],
-        color: "#FF4560", // Color for Product A
+        color: "#FF4560",  
       },
       {
         name: "Product B",
         data: [200, 150, 150, 180, 250, 200],
-        color: "#008FFB", // Color for Product B
+        color: "#008FFB",  
       },
       {
         name: "Product C",
         data: [100, 120, 80, 130, 150, 120],
-        color: "#00E396", // Color for Product C
+        color: "#00E396",  
       },
       {
         name: "Product D",
         data: [50, 80, 60, 90, 120, 80],
-        color: "#775DD0", // Color for Product D
+        color: "#775DD0",  
       },
     ],
   
@@ -36,8 +36,8 @@ const stackedBarChart = {
         bar: {
           horizontal: true,
           columnWidth: "30%",
-          borderRadius: 10,               // Border radius applied
-          borderRadiusApplication: "end", // Applies the radius only at the top
+          borderRadius: 10,               
+          borderRadiusApplication: "end", 
         },
       },
       dataLabels: {

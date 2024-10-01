@@ -8,7 +8,6 @@ function EChart3() {
     const [chartSeries, setChartSeries] = useState(eChart3.series);
 
     const onChange = (key) => {
-        console.log("Selected Tab:", key);
         switch (key) {
             case '1': 
                 setChartSeries([

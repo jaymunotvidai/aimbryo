@@ -83,7 +83,7 @@ function EChart3() {
                 <div className="chart-container">
                     <div style={{ display: 'flex' }}>
                         <div style={{ width: '30%' }}>
-                            <Title level={5} className="header-name">Nikhil</Title>
+                            <Title level={5} className="header-name">Source</Title>
                         </div>
                         <div style={{ width: '70%' }}>
                             <Tabs defaultActiveKey="1" items={items} onChange={onChange} />

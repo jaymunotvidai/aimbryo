@@ -38,6 +38,18 @@ const eChart = {
       strokeDashArray: 2,
     },
     xaxis: {
+      title: {
+        text: 'SART AGE',
+        margin: 10,
+        offsetX: 0,
+        offsetY: -10,
+        style: {
+          fontSize:  '12px',
+          fontWeight:  '400',
+          fontFamily:  'Poppins',
+          color:  '#4A5157'
+        },
+      },
       categories: ["Feb", "Mar", "Apr", "May", "Jun", "Jul"],
       labels: {
         show: true,
@@ -54,6 +66,15 @@ const eChart = {
       },
     },
     yaxis: {
+      title: {
+        text: 'Patients',
+        style: {
+          fontSize:  '12px',
+          fontWeight:  '400',
+          fontFamily:  'Poppins',
+          color:  '#4A5157'
+        },
+      },
       labels: {
         show: true,
         align: "right",

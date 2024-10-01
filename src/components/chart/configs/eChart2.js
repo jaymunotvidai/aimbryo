@@ -54,6 +54,7 @@ const eChart2 = {
         },
       },
       yaxis: {
+        
         labels: {
           show: true,
           align: "right",

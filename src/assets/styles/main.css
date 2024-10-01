@@ -3115,9 +3115,8 @@ section.ant-layout.ant-layout-has-sider.layout-dashboard.layout-profile
   width: 100%;
 }
 .ant-tabs-tab{
-  padding: 0px 40px 0px 40px;
+  padding: 5px 40px 5px 40px;
   border-radius: 15px;
-  height: 25px;
 }
 
 .ant-tabs-tab-active{

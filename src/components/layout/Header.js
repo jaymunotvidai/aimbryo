@@ -16,12 +16,6 @@ import {
   Typography,
 } from "antd";
 
-
-
- 
- 
- 
-
 const toggler = [
   <svg
     width="20"
@@ -57,9 +51,6 @@ function Header({
   name,
   subName,
   onPress,
-  handleSidenavColor,
-  handleSidenavType,
-  handleFixedNavbar,
 }) {
   const { Title, Text } = Typography;
 
@@ -77,14 +68,7 @@ function Header({
       </div>
       <Row gutter={[24, 0]} style={{borderBottom: '1px solid #EFEDF2', paddingBottom:'20px'}}>
         <Col span={24} md={6} className="align-middle">
-          {/* <Breadcrumb>
-            <Breadcrumb.Item>
-              <NavLink to="/">Pages</NavLink>
-            </Breadcrumb.Item>
-            <Breadcrumb.Item style={{ textTransform: "capitalize" }}>
-              {name.replace("/", "")}
-            </Breadcrumb.Item>
-          </Breadcrumb> */}
+ 
           <div className="ant-page-header-heading">
             <span
               className="ant-page-header-heading-title"
@@ -95,17 +79,7 @@ function Header({
           </div>
         </Col>
         <Col span={24} md={18} className="header-control" style={{paddingRight: '0'}}>
-          {/* <Badge size="small" count={4}>
-            <Dropdown overlay={menu} trigger={["click"]}>
-              <a
-                href="#pablo"
-                className="ant-dropdown-link"
-                onClick={(e) => e.preventDefault()}
-              >
-                {bell}
-              </a>
-            </Dropdown>
-          </Badge> */}
+ 
           <Button type="link" style={{paddingRight: '0'}} onClick={showDrawer}>
           <img src={message} alt="" />
           </Button>
@@ -173,15 +147,7 @@ function Header({
           <img src={Logo4} alt="" />
           <img src={Logo5} alt="" />
           </div>
-          {/* <Link to="/sign-in" className="btn-sign-in">
-            {profile}
-            <span>Sign in</span>
-          </Link> */}
-          {/* <Input
-            className="header-search"
-            placeholder="Type here..."
-            prefix={<SearchOutlined />}
-          /> */}
+        
         </Col>
       </Row>
     </>

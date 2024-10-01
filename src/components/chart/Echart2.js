@@ -4,24 +4,24 @@ import React, { useState } from "react";
 
 function EChart2() {
   const [activeButton, setActiveButton] = useState('patients');
-  const [chartSeries, setChartSeries] = useState(eChart2.series); // Store the chart series in state
+  const [chartSeries, setChartSeries] = useState(eChart2.series);  
 
   const handleButtonClick = (buttonName) => {
     setActiveButton(buttonName);
 
-    // Update the chart series based on the button clicked
+   
     if (buttonName === 'patients') {
       setChartSeries([
         {
           name: "Total Patients",
-          data: [30, 40, 45, 50, 49, 60, 70] // Example data for "patients"
+          data: [30, 40, 45, 50, 49, 60, 70]  
         }
       ]);
     } else if (buttonName === 'embryo') {
       setChartSeries([
         {
           name: "Total Embryo Graded",
-          data: [20, 30, 35, 40, 35, 50, 60] // Example data for "embryo"
+          data: [20, 30, 35, 40, 35, 50, 60]  
         }
       ]);
     }
@@ -35,6 +35,7 @@ function EChart2() {
         </div>
         <div>
           <span className="weektext">Week</span>
+          
         </div>
       </div>
       <div className="stackedbtn">
@@ -56,7 +57,7 @@ function EChart2() {
         <ReactApexChart
           className="bar-chart"
           options={eChart2.options}
-          series={chartSeries} // Use the updated chart series
+          series={chartSeries}  
           height={410}
           type="bar"
         />

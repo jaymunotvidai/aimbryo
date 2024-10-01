@@ -8,7 +8,6 @@ function RedialChart() {
     const [chartSeries, setChartSeries] = useState([95, 70, 30, 35]);
 
     const onChange = (key) => {
-        console.log("Selected Tab:", key);
         switch (key) {
             case '1':
                 setChartSeries([95, 70, 30, 35]);  

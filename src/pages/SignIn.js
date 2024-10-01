@@ -30,7 +30,6 @@ import {
   GithubOutlined,
 } from "@ant-design/icons";
 function onChange(checked) {
-  console.log(`switch to ${checked}`);
 }
 const { Title } = Typography;
 const { Header, Footer, Content } = Layout;
@@ -117,11 +116,9 @@ const signin = [
 export default class SignIn extends Component {
   render() {
     const onFinish = (values) => {
-      console.log("Success:", values);
     };
 
     const onFinishFailed = (errorInfo) => {
-      console.log("Failed:", errorInfo);
     };
     return (
       <>

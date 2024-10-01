@@ -1,11 +1,11 @@
 import ReactApexChart from "react-apexcharts";
 import eChart2 from "./configs/eChart2";
 import React, { useState } from "react";
-
+import Frame from '../../assets/images/Frame 1171278118.svg';
 function EChart2() {
   const [activeButton, setActiveButton] = useState('patients');
   const [chartSeries, setChartSeries] = useState(eChart2.series);  
-
+ 
   const handleButtonClick = (buttonName) => {
     setActiveButton(buttonName);
 
@@ -43,13 +43,15 @@ function EChart2() {
           className={`stacked-button ${activeButton === "patients" ? "active" : ""}`}
           onClick={() => handleButtonClick("patients")}
         >
-          <span className="button-icon">Total Patients</span>
+          <img src={Frame} alt="" />
+          <span className="button-icon">  Total Patients</span>
         </button>
 
         <button
           className={`stacked-button ${activeButton === "embryo" ? "active" : ""}`}
           onClick={() => handleButtonClick("embryo")}
         >
+          <img src={Frame} alt="" />
           <span className="button-icon">Total Embryo Graded</span>
         </button>
       </div>

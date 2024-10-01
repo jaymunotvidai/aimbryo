@@ -116,7 +116,7 @@ function EChart3() {
                     className="bar-chart"
                     options={eChart3.options}
                     series={chartSeries}
-                    height={330}
+                    height={345}
                     type="bar"
                 />
             </div>

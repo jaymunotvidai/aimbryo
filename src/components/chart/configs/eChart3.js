@@ -47,7 +47,8 @@ const eChart3 = {
     },
     stroke: {
       show: true,
-      width: 2,
+      width: 5,
+      lineCap: 'round',
       colors: ["#fff"],
     },
     dataLabels: {
@@ -72,14 +73,14 @@ const eChart3 = {
       title: {
         text: 'Days',
         margin: 10,
-    offsetX: 0,
-    offsetY: 0,
-    style: {
-      fontSize:  '12px',
-      fontWeight:  '400',
-      fontFamily:  'Poppins',
-      color:  '#4A5157'
-    },
+        offsetX: 0,
+        offsetY: 0,
+        style: {
+          fontSize: '12px',
+          fontWeight: '400',
+          fontFamily: 'Poppins',
+          color: '#4A5157',
+        },
       },
       categories: ["Product A", "Product B", "Product C", "Product D", "Product E"],
       labels: {
@@ -89,7 +90,7 @@ const eChart3 = {
         maxWidth: 160,
         style: {
           colors: ["#4A5157", "#4A5157", "#4A5157", "#4A5157", "#4A5157"],
-          fontSize: "14px", // Adjust font size as needed
+          fontSize: "14px",
         },
       },
       axisBorder: {
@@ -107,12 +108,12 @@ const eChart3 = {
     states: {
       hover: {
         filter: {
-          type: "none", // Disable any hover filter effect
+          type: "none",
         },
       },
     },
     legend: {
-      show: false, // Hide the legend
+      show: false,
     },
   },
 };

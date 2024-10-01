@@ -4,8 +4,6 @@ import { useState } from 'react';
 
 function Overview() {
     const { Title } = Typography;
-
-    // State to manage width and color values
     const [data, setData] = useState({
         width1: 40,
         width2: 60,

@@ -1486,6 +1486,7 @@ span.ismobile {
   margin-top: 25px;
 }
 .setting-drwer {
+  display: none;
   background: #fff;
   border-radius: 50%;
   bottom: 42px;

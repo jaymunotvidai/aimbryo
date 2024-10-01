@@ -66,7 +66,7 @@ function Header({
       <div className="setting-drwer" onClick={showDrawer}>
         {setting}
       </div>
-      <Row gutter={[24, 0]} style={{borderBottom: '1px solid #EFEDF2', paddingBottom:'20px'}}>
+      <Row gutter={[24, 0]} style={{borderBottom: '1px solid #EFEDF2'}}>
         <Col span={24} md={6} className="align-middle">
  
           <div className="ant-page-header-heading">

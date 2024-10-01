@@ -3256,7 +3256,6 @@ button.stacked-button {
   width: 100%;
 }
 button.stacked-button span {
-  /* background: #fff; */
   border-radius: 8px;
   display: inline-block;
   height: 32px;
@@ -3264,9 +3263,59 @@ button.stacked-button span {
   width: 100%;
 }
 
+.paginationDiv{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.patientlis-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.totalpatientcount {
+  font-family: Poppins;
+font-size: 16px;
+font-weight: 600;
+line-height: 24px;
+text-align: left;
+color: var(--Text-Primary, #232323);
+}
+
+.ul-footer{
+  display: flex;
+  
+}
+
+.div-ul-footer-patientlist{
+  width: 50%;
+}
 /*  */
 
+.footer-name-Not-started{
+padding-right: 2rem;
+border-left: 5px solid red;
+  border-radius: 2px;
+}
+.footer-name-Pending{
+  padding-right: 2rem;
+  border-left: 5px solid red;
+  border-radius: 2px;
+}
+.footer-name-Completed{
+  border-left: 5px solid red;
+  border-radius: 2px;
 
+}
+.name-main{
+  display: flex;
+  justify-content:space-between;
+  width: auto;
+}
 
 
 

@@ -5,11 +5,8 @@ import radialChart from "./configs/radialChart";
 
 function RedialChart() {
     const { Title } = Typography;
-
-    // State to manage the series
     const [chartSeries, setChartSeries] = useState([95, 70, 30, 35]);
 
-    // Tab change handler
     const onChange = (key) => {
         console.log("Selected Tab:", key);
         switch (key) {

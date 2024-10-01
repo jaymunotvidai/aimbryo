@@ -99,7 +99,10 @@ const DashboardIcons = [
 ];
 
 
-
+const handlePageChange = (key )=>{
+  console.log(key);
+  
+}
 
 
 export default function Tables() {
@@ -174,18 +177,23 @@ export default function Tables() {
             <div className='paginationDiv'>
               <span>Showing 1 to 3 of 10 entries</span>
               <nav aria-label="Page navigation example">
-                <ul class="pagination justify-content-end">
-                  <li class="page-item disabled">
-                    <a class="page-link" href="#" tabindex="-1"><img src={ArrowLeft} alt="uploadTable" /></a>
+                <ul className="pagination justify-content-end">
+                  <li className="page-item disabled">
+                    <button className="page-link" disabled aria-label="Previous">
+                      <img src={ArrowLeft} alt="Previous" />
+                    </button>
                   </li>
-                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item">
-                    <a class="page-link" href="#"><img src={ArrowRight} alt="uploadTable" /></a>
+                  <li className="page-item"><button className="page-link" onClick={() => handlePageChange(1)}>1</button></li>
+                  <li className="page-item"><button className="page-link" onClick={() => handlePageChange(2)}>2</button></li>
+                  <li className="page-item"><button className="page-link" onClick={() => handlePageChange(3)}>3</button></li>
+                  <li className="page-item">
+                    <button className="page-link" onClick={() => handlePageChange('next')} aria-label="Next">
+                      <img src={ArrowRight} alt="Next" />
+                    </button>
                   </li>
                 </ul>
               </nav>
+
             </div>
           </div>
 
@@ -199,12 +207,7 @@ export default function Tables() {
         <div>
           <span className='totalpatientcount'>Total : 29</span>
         </div>
-        {/* <div className='name-main'>
-       <div className='footer-name-Not-started'>Not started</div>
-       <div className='footer-name-Pending'>Pending</div>
-       <div className='footer-name-Completed'>Completed</div>
 
-        </div> */}
       </div>
     </>
   )

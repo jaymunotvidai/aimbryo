@@ -18,7 +18,7 @@ const radialChart = {
                 },
             },
         },
-        labels: ['Mobile apps', 'Websites'],  
+        labels: ['Fresh Self', 'Fresh Donor' , 'Frozen Self' , 'Frozen Donor'],  
         fill: {
             colors: ['#37C577', '#3768C5', '#EC9D3E', '#C5B037'], 
         },

@@ -1,13 +1,32 @@
-
+import React, { useState } from "react";
 import ReactApexChart from "react-apexcharts";
-import { Typography } from "antd";
-import radialChart from "./configs/radialChart"; // Import radialChart instead of lineChart
-import { Tabs } from 'antd';
+import { Typography, Tabs } from "antd";
+import radialChart from "./configs/radialChart";
+
 function RedialChart() {
     const { Title } = Typography;
+
+    // State to manage the series
+    const [chartSeries, setChartSeries] = useState([95, 70, 30, 35]);
+
+    // Tab change handler
     const onChange = (key) => {
-        console.log(key);
+        console.log("Selected Tab:", key);
+        switch (key) {
+            case '1':
+                setChartSeries([95, 70, 30, 35]);  
+                break;
+            case '2':
+                setChartSeries([60, 40, 50, 80]); 
+                break;
+            case '3':
+                setChartSeries([40, 90, 20, 60]);  
+                break;
+            default:
+                setChartSeries([95, 70, 30, 35]);  
+        }
     };
+
     const items = [
         {
             key: '1',
@@ -22,6 +41,7 @@ function RedialChart() {
             label: 'Both',
         },
     ];
+
     return (
         <>
             <div className="chart-container">
@@ -30,36 +50,32 @@ function RedialChart() {
                 </div>
 
                 <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
+
                 <div className="maindiv">
                     <div className="innerdiv">
-                        <span className="spanmain" style={{backgroundColor:'rgb(55, 197, 119)'}}>
-                        </span>
+                        <span className="spanmain" style={{ backgroundColor: 'rgb(55, 197, 119)' }}></span>
                         Fresh Self
                     </div>
                     <div className="innerdiv">
-                        <span className="spanmain" style={{backgroundColor:'rgb(55, 104, 197)'}}>
-                        </span>
-                        Fresh Self
-                    </div>
-                    <div className="innerdiv">
-                        <span className="spanmain" style={{backgroundColor:'rgb(236, 157, 62)'}}>
-                        </span>
+                        <span className="spanmain" style={{ backgroundColor: 'rgb(55, 104, 197)' }}></span>
                         Fresh Donor
                     </div>
                     <div className="innerdiv">
-                        <span className="spanmain" style={{backgroundColor:'rgb(197, 176, 55)'}}>
-                        </span>
-                        Fresh Donor
+                        <span className="spanmain" style={{ backgroundColor: 'rgb(236, 157, 62)' }}></span>
+                        Frozen Self
+                    </div>
+                    <div className="innerdiv">
+                        <span className="spanmain" style={{ backgroundColor: 'rgb(197, 176, 55)' }}></span>
+                        Frozen Donor
                     </div>
                 </div>
             </div>
 
-
             <ReactApexChart
                 className="full-width"
-                options={radialChart.options} // Use radialChart options
-                series={radialChart.series}   // Use radialChart series
-                type="radialBar"              // Change chart type to 'radialBar'
+                options={radialChart.options} 
+                series={chartSeries}           
+                type="radialBar"              
                 height={350}
                 width={"100%"}
             />

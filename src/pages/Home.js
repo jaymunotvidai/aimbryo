@@ -86,7 +86,6 @@ function Home() {
             </Col>
           ))}
         </Row>
-
         <Row gutter={[24, 0]}>
           {/* Left column for Echart and LineChart */}
           <Col xs={24} sm={24} md={24} lg={24} xl={7} className="mb-24" style={{paddingRight:'0px'}}>

@@ -7,7 +7,6 @@ const radialChart = {
         },
         plotOptions: {
             radialBar: {
-                
                 hollow: {
                     size: '35%', 
                     background: '#f0f0f0',  
@@ -15,6 +14,9 @@ const radialChart = {
                 track: {
                     background: '#fafafa',  
                     strokeWidth: '100%',  
+                },
+                dataLabels: {
+                    show: false,  // Hide labels that appear on hover
                 },
             },
         },

@@ -3058,17 +3058,23 @@ section.ant-layout.ant-layout-has-sider.layout-dashboard.layout-profile
   fill: #8c8c8c;
 }
 
-.layout-dashboard .ant-layout-sider.sider-primary .ant-menu-item .active:before{
+.layout-dashboard .ant-layout-sider.sider-primary .ant-menu-item .active:before {
   background: linear-gradient(45deg, #7d54f3, #cebcff);
-    border-radius: 0 20px 20px 20px;
-    content: "";
-    inset: 0;
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    padding: 1.5px;
-    position: absolute;
+  border-radius: 0 20px 20px 20px;
+  content: "";
+  inset: 0;
+  padding: 1.5px;
+  position: absolute;
+  
+  /* Webkit mask (for Safari, Chrome) */
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+
+  /* Standard mask for other browsers */
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
 }
+
 
 .footerbox {
   background: #f9f7ff;

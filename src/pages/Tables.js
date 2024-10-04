@@ -127,16 +127,16 @@ export default function Tables() {
                 <div className="d-flex flex-wrap">
                   <Modal title="Registration Form" centered open={open} onOk={() => setOpen(false)} onCancel={() => setOpen(false)} width={1000} >
                     <Form name="basic" labelCol={{   span: 8, }} wrapperCol={{   span: 16, }} style={{ maxWidth: 600, }} initialValues={{ remember: true, }} onFinish={onFinish} onFinishFailed={onFinishFailed} autoComplete="off" >
-                      <Form.Item label="Username" name="username" rules={[ { required: false},]} >
+                      <Form.Item label="Username" name="username" rules={[ { required: true},]} >
                         <Input />
                       </Form.Item>
-                      <Form.Item label="Doctor" name="Doctor" rules={[   { required: false},]}>
+                      <Form.Item label="Doctor" name="Doctor" rules={[   { required: true},]}>
                         <Input />
                       </Form.Item>
-                      <Form.Item label="MR.NO" name="MR.NO" rules={[   { required: false},]}>
+                      <Form.Item label="MR.NO" name="MR.NO" rules={[   { required: true},]}>
                         <Input />
                       </Form.Item>
-                      <Form.Item label="Gender" name="Gender" rules={[   { required: false},]}>
+                      <Form.Item label="Gender" name="Gender" rules={[   { required: true},]}>
                         <Input />
                       </Form.Item>
                     </Form>

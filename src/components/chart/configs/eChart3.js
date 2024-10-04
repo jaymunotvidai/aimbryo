@@ -41,7 +41,9 @@ const eChart3 = {
       bar: {
         horizontal: true,
         columnWidth: "30%",
-        borderRadius: 10,
+        borderRadius: 7,
+        borderRadiusApplication: "around",
+        borderRadiusWhenStacked: 'all',
         barHeight: "70%",
       },
     },

@@ -7,91 +7,9 @@ import ArrowLeft from '../assets/images/arrow-square-left.svg'
 import ArrowRight from '../assets/images/arrow-square-right.svg'
 import { Modal } from 'antd';
 import {   Form, Input } from 'antd';
-const tableData = [
-  {
-    name: 'Ralph Edwards',
-    mrNo: 'SDF45678543',
-    gender: 'Female',
-    accession: '123RND',
-    doctor: 'Cody Fisher',
-    status: 'Completed',
-  },
-  {
-    name: 'Jane Cooper',
-    mrNo: 'XYZ12345678',
-    gender: 'Male',
-    accession: '987XYZ',
-    doctor: 'Dr. Strange',
-    status: 'Pending',
-  },
-  {
-    name: 'Jane Cooper',
-    mrNo: 'XYZ12345678',
-    gender: 'Male',
-    accession: '987XYZ',
-    doctor: 'Dr. Strange',
-    status: 'Pending',
-  },
-  {
-    name: 'Jane Cooper',
-    mrNo: 'XYZ12345678',
-    gender: 'Male',
-    accession: '987XYZ',
-    doctor: 'Dr. Strange',
-    status: 'Pending',
-  },
-  {
-    name: 'Jane Cooper',
-    mrNo: 'XYZ12345678',
-    gender: 'Male',
-    accession: '987XYZ',
-    doctor: 'Dr. Strange',
-    status: 'Completed',
-  },
-  {
-    name: 'Jane Cooper',
-    mrNo: 'XYZ12345678',
-    gender: 'Male',
-    accession: '987XYZ',
-    doctor: 'Dr. Strange',
-    status: 'Pending',
-  },
-  {
-    name: 'Jane Cooper',
-    mrNo: 'XYZ12345678',
-    gender: 'Male',
-    accession: '987XYZ',
-    doctor: 'Dr. Strange',
-    status: 'Pending',
-  },
-  {
-    name: 'Jane Cooper',
-    mrNo: 'XYZ12345678',
-    gender: 'Male',
-    accession: '987XYZ',
-    doctor: 'Dr. Strange',
-    status: 'Completed',
-  },
-  {
-    name: 'Jane Cooper',
-    mrNo: 'XYZ12345678',
-    gender: 'Male',
-    accession: '987XYZ',
-    doctor: 'Dr. Strange',
-    status: 'Pending',
-  },
-  {
-    name: 'Jane Cooper',
-    mrNo: 'XYZ12345678',
-    gender: 'Male',
-    accession: '987XYZ',
-    doctor: 'Dr. Strange',
-    status: 'Pending',
-  },
+import { TableData } from '../Json/tableData';
 
-
-];
-
+const tableData =TableData
 const DashboardIcons = [
   { src: addIcon, alt: 'addIcon' },
   { src: filterIcon, alt: 'filterIcon' },

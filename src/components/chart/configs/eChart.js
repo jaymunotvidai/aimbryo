@@ -50,7 +50,7 @@ const eChart = {
           color:  '#4A5157'
         },
       },
-      categories: ["<30>", "35-37", "38-40", "41-42" ],
+      categories: ["<30", "35-37", "38-40", "41-42" ],
       labels: {
         show: true,
         align: "right",

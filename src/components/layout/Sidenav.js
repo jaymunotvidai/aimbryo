@@ -1,5 +1,3 @@
-
-// import { useState } from "react";
 import { Menu } from "antd";
 import { NavLink, useLocation } from "react-router-dom";
 import logo from "../../assets/images/AINOVA Logo.svg";
@@ -82,12 +80,10 @@ function Sidenav({ color }) {
   return (
     <>
 
-      {/* <div> */}
 
       <div>
         <div className="brand align-items-center text-center" style={{ margin: '40px' }}>
           <img src={logo} alt="" />
-          {/* <span>Muse Dashboard</span> */}
         </div>
         <Menu theme="light" mode="inline">
           <Menu.Item key="1">
@@ -156,47 +152,7 @@ function Sidenav({ color }) {
               <span className="label">Support</span>
             </NavLink>
           </Menu.Item>
-          {/* <Menu.Item key="4">
-          <NavLink to="/rtl">
-            <span
-              className="icon"
-              style={{
-                background: page === "rtl" ? color : "",
-              }}
-            >
-              {rtl}
-            </span>
-            <span className="label">RTL</span>
-          </NavLink>
-        </Menu.Item> */}
-          {/* <Menu.Item className="menu-item-header" key="5">
-          Account Pages
-        </Menu.Item>
-        <Menu.Item key="6">
-          <NavLink to="/profile">
-            <span
-              className="icon"
-              style={{
-                background: page === "profile" ? color : "",
-              }}
-            >
-              {profile}
-            </span>
-            <span className="label">Profile</span>
-          </NavLink>
-        </Menu.Item>
-        <Menu.Item key="7">
-          <NavLink to="/sign-in">
-            <span className="icon">{signin}</span>
-            <span className="label">Sign In</span>
-          </NavLink>
-        </Menu.Item>
-        <Menu.Item key="8">
-          <NavLink to="/sign-up">
-            <span className="icon">{signup}</span>
-            <span className="label">Sign Up</span>
-          </NavLink>
-        </Menu.Item> */}
+        
         </Menu>
       </div>
       <div>
@@ -221,32 +177,11 @@ function Sidenav({ color }) {
         <h6>Thoughts Time</h6><p>We don’t have any notice for you, till then you can share your thoughts with your peers.</p>
           <button type="button" class="ant-btn css-14qglws  ant-btn-solid ant-btn-sm ant-btn-block"><span>Write a message</span></button>
         </div>
-        {/* <div class="footer-box"><span class="icon" style="color: rgb(125, 84, 243);"></span>
-          <h6>Thoughts Time</h6><p>We don’t have any notice for you, till then you can share your thoughts with your peers.</p>
-          <button type="button" class="ant-btn css-14qglws ant-btn-primary ant-btn-solid ant-btn-sm ant-btn-block"><span>Write a message</span></button>
-        </div> */}
+      
 
       </div>
 
-      {/* </div> */}
-
-      {/* <div className="aside-footer">
-        <div
-          className="footer-box"
-          style={{
-            background: color,
-          }}
-        >
-          <span className="icon" style={{ color }}>
-            {dashboard}
-          </span>
-          <h6>Need Help?</h6>
-          <p>Please check our docs</p>
-          <Button type="primary" className="ant-btn-sm ant-btn-block">
-            DOCUMENTATION
-          </Button>
-        </div>
-      </div> */}
+    
     </>
   );
 }

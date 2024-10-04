@@ -120,17 +120,8 @@ export default function Tables() {
                   <input type="text" className="form-control border input-search" placeholder="Search by Name, Case ID, Accession" />
                 </div>
                 <div className="d-flex flex-wrap">
-                  {DashboardIcons.map((icon, index) => (
-                    <div key={index} className="row text-decoration-none text-reset">
-                      {icon.path ? (
-                        <Link to={`/${icon.path}`} className="d-flex align-items-center">
-                          <img className='dashBoardIcon' src={icon.src} alt={icon.alt} />
-                        </Link>
-                      ) : (
-                        <img className='dashBoardIcon' src={icon.src} alt={icon.alt} />
-                      )}
-                    </div>
-                  ))}
+                <img className='dashBoardIcon' src={DashboardIcons[0].src} alt={DashboardIcons[0].alt} />
+                <img className='dashBoardIcon' src={DashboardIcons[1].src} alt={DashboardIcons[1].alt} />
                 </div>
               </div>
             </div>

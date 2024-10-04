@@ -3579,3 +3579,16 @@ border-left: 5px solid red;
   background-color: white;
   border-color: white;
 }
+
+.clinicimages{
+  align-items: center;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  height: 33px;
+  justify-content: center;
+  list-style: none;
+  opacity: .6;
+  width: 110px;
+}

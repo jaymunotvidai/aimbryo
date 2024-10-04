@@ -52,6 +52,11 @@ function Header({
   subName,
   onPress,
 }) {
+  const [selectedImage, setSelectedImage] = useState(1);
+
+  const handleImageClick = (index) => {
+    setSelectedImage(index);
+  };
   const { Title, Text } = Typography;
 
   const [visible, setVisible] = useState(false);
@@ -66,9 +71,9 @@ function Header({
       <div className="setting-drwer" onClick={showDrawer}>
         {setting}
       </div>
-      <Row gutter={[24, 0]} style={{borderBottom: '1px solid #EFEDF2'}}>
+      <Row gutter={[24, 0]} style={{ borderBottom: '1px solid #EFEDF2' }}>
         <Col span={24} md={6} className="align-middle">
- 
+
           <div className="ant-page-header-heading">
             <span
               className="ant-page-header-heading-title"
@@ -78,10 +83,10 @@ function Header({
             </span>
           </div>
         </Col>
-        <Col span={24} md={18} className="header-control" style={{paddingRight: '0'}}>
- 
-          <Button type="link" style={{paddingRight: '0'}} onClick={showDrawer}>
-          <img src={message} alt="" />
+        <Col span={24} md={18} className="header-control" style={{ paddingRight: '0' }}>
+
+          <Button type="link" style={{ paddingRight: '0' }} onClick={showDrawer}>
+            <img src={message} alt="" />
           </Button>
           <Button
             type="link"
@@ -107,8 +112,8 @@ function Header({
               </div>
             </div>
           </Drawer>
-          <Button type="link" style={{paddingRight: '0'}} onClick={showDrawer}>
-          <img src={Notifications} alt="" />
+          <Button type="link" style={{ paddingRight: '0' }} onClick={showDrawer}>
+            <img src={Notifications} alt="" />
           </Button>
           <Button
             type="link"
@@ -141,13 +146,12 @@ function Header({
             marginLeft: '1rem'
           }}></div>
           <div className="d-flex gap-4">
-          <img src={Logo1} alt="" />
-          <img src={Logo2} alt="" />
-          <img src={Logo3} alt="" />
-          <img src={Logo4} alt="" />
-          <img src={Logo5} alt="" />
+            <img src={Logo1} alt="Logo1" className="clinicimages" style={{ opacity: selectedImage === 1 ? 1 : 0.5 }} onClick={() => handleImageClick(1)} />
+            <img src={Logo2} alt="Logo2" className="clinicimages" style={{ opacity: selectedImage === 2 ? 1 : 0.5 }} onClick={() => handleImageClick(2)} />
+            <img src={Logo3} alt="Logo3" className="clinicimages" style={{ opacity: selectedImage === 3 ? 1 : 0.5 }} onClick={() => handleImageClick(3)} />
+            <img src={Logo4} alt="Logo4" className="clinicimages" style={{ opacity: selectedImage === 4 ? 1 : 0.5 }} onClick={() => handleImageClick(4)} />
+            <img src={Logo5} alt="Logo5" className="clinicimages" style={{ opacity: selectedImage === 5 ? 1 : 0.5 }} onClick={() => handleImageClick(5)} />
           </div>
-        
         </Col>
       </Row>
     </>

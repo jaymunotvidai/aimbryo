@@ -5,8 +5,7 @@ Dashboard
 ![video](/src/assets/images/Dashboard.png)
 
 Patinet List
-1. Patient list with the search boc and add new patient
-2. Pagination to switch between the Patient List 
-3. Count of the patient data 
-4. onclick on the row patient data can be viewed
+1. Pagination to switch between the Patient List 
+2. Count of the patient data 
+3. onclick on the row patient data can be viewed
 ![video](/src/assets/images/patientlist.png)

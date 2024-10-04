@@ -3,7 +3,7 @@ import viewTable from '../../assets/images/viewTable.svg';
 import uploadTable from '../../assets/images/uploadTable.svg';
 
 import { Modal } from 'antd';
-import {   Form, Input   } from 'antd';
+import {Form, Input} from 'antd';
 
 
 const onFinish = (values) => {
@@ -25,6 +25,7 @@ const TableComponent = ({ data }) => {
       Doctor: row.doctor,
       "MR.NO": row.mrNo,
       Gender: row.gender,
+      Accession : row.accession
     };
     form.setFieldsValue(formData);
   };
@@ -81,6 +82,9 @@ const TableComponent = ({ data }) => {
             <Input />
           </Form.Item>
           <Form.Item label="Gender" name="Gender" rules={[{ required: false },]}>
+            <Input />
+          </Form.Item>
+          <Form.Item label="Accession" name="Accession" rules={[{ required: false },]}>
             <Input />
           </Form.Item>
         </Form>

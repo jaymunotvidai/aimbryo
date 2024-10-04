@@ -3559,7 +3559,12 @@ border-left: 5px solid red;
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 1.125rem;
+  border: 10px solid white;
   color: #4A5157;
+}
+
+.customRow{
+  border: 10px solid white;
 }
 
 .customRow td {

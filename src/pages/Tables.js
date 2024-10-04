@@ -2,11 +2,10 @@ import React from 'react'
 
 import addIcon from '../assets/images/addIcon.svg'
 import filterIcon from '../assets/images/filterIcon.svg'
-import { Link } from 'react-router-dom';
 import TableComponent from '../components/ReusableComponents/TableComponent';
 import ArrowLeft from '../assets/images/arrow-square-left.svg'
 import ArrowRight from '../assets/images/arrow-square-right.svg'
-
+import { Modal } from 'antd';
 
 const tableData = [
   {
@@ -99,13 +98,14 @@ const DashboardIcons = [
 ];
 
 
-const handlePageChange = (key )=>{
+const handlePageChange = (key) => {
   console.log(key);
-  
+
 }
 
 
 export default function Tables() {
+  const [open, setOpen] = React.useState(false);
   return (
     <>
       <div className=' flex-column flex-grow-1'  >
@@ -120,14 +120,19 @@ export default function Tables() {
                   <input type="text" className="form-control border input-search" placeholder="Search by Name, Case ID, Accession" />
                 </div>
                 <div className="d-flex flex-wrap">
-                <img className='dashBoardIcon' src={DashboardIcons[0].src} alt={DashboardIcons[0].alt} />
-                <img className='dashBoardIcon' src={DashboardIcons[1].src} alt={DashboardIcons[1].alt} />
+                  <Modal title="Registration Form" centered open={open} onOk={() => setOpen(false)} onCancel={() => setOpen(false)} width={1000} >
+                    <p>some contents...</p>
+                    <p>some contents...</p>
+                    <p>some contents...</p>
+                  </Modal>
+                  <img className='dashBoardIcon' src={DashboardIcons[0].src} alt={DashboardIcons[0].alt} onClick={() => setOpen(true)} />
+                  <img className='dashBoardIcon' src={DashboardIcons[1].src} alt={DashboardIcons[1].alt} />
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="row mx-2 p-1 bg-light rounded patientPara px-4">
+          <div className="row mx-2 p-1  rounded patientPara px-4">
             <div className="col-lg-3 col-md-6 p-1">
               <div className="form-check p-1 px-2">
                 <input className="form-check-input" type="checkbox" id="flexCheckDefault1" />
@@ -194,7 +199,7 @@ export default function Tables() {
         </div>
 
       </div>
-      <div className='patientlis-footer'>
+      <div className='patientlis-footer' style={{position:'fixed' , bottom :'0' ,width:'100vw' , marginBottom : '10px'}}>
         <div>
           <span className='totalpatientcount'>Total : 29</span>
         </div>

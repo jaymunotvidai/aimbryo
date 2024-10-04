@@ -11,56 +11,56 @@ function EChart3() {
         switch (key) {
             case '1': 
                 setChartSeries([
-                    { name: "Product A", data: [150, 180, 200, 220, 260, 180], color: "#F1EBFF" },
-                    { name: "Product B", data: [100, 150, 170, 130, 210, 140], color: "#E4D7FF" },
-                    { name: "Product C", data: [120, 130, 110, 140, 100, 90], color: "#C7B2F2" },
-                    { name: "Product D", data: [90, 80, 60, 70, 110, 70], color: "#9E7FE1" },
-                    { name: "Product E", data: [80, 60, 50, 40, 90, 50], color: "#7C67A8" },
+                    { name: "Day 3", data: [150, 180, 200, 220, 260, 180], color: "#F1EBFF" },
+                    { name: "Day 3", data: [100, 150, 170, 130, 210, 140], color: "#E4D7FF" },
+                    { name: "Day 5", data: [120, 130, 110, 140, 100, 90], color: "#C7B2F2" },
+                    { name: "Day 6", data: [90, 80, 60, 70, 110, 70], color: "#9E7FE1" },
+                    { name: "Day 7", data: [80, 60, 50, 40, 90, 50], color: "#7C67A8" },
                 ]);
                 break;
             case '2': 
                 setChartSeries([
-                    { name: "Product A", data: [220, 300, 180, 270, 320, 240], color: "#F1EBFF" },
-                    { name: "Product B", data: [190, 210, 250, 230, 290, 260], color: "#E4D7FF" },
-                    { name: "Product C", data: [150, 170, 160, 190, 150, 130], color: "#C7B2F2" },
-                    { name: "Product D", data: [100, 110, 140, 130, 170, 120], color: "#9E7FE1" },
-                    { name: "Product E", data: [60, 70, 100, 80, 110, 90], color: "#7C67A8" },
+                    { name: "Day 3", data: [220, 300, 180, 270, 320, 240], color: "#F1EBFF" },
+                    { name: "Day 4", data: [190, 210, 250, 230, 290, 260], color: "#E4D7FF" },
+                    { name: "Day 5", data: [150, 170, 160, 190, 150, 130], color: "#C7B2F2" },
+                    { name: "Day 6", data: [100, 110, 140, 130, 170, 120], color: "#9E7FE1" },
+                    { name: "Day 7", data: [60, 70, 100, 80, 110, 90], color: "#7C67A8" },
                 ]);
                 break;
             case '3': 
                 setChartSeries([
-                    { name: "Product A", data: [180, 150, 190, 250, 240, 210], color: "#F1EBFF" },
-                    { name: "Product B", data: [140, 130, 160, 180, 220, 170], color: "#E4D7FF" },
-                    { name: "Product C", data: [130, 120, 100, 110, 160, 140], color: "#C7B2F2" },
-                    { name: "Product D", data: [70, 60, 90, 100, 130, 110], color: "#9E7FE1" },
-                    { name: "Product E", data: [50, 40, 70, 80, 90, 60], color: "#7C67A8" },
+                    { name: "Day 3", data: [180, 150, 190, 250, 240, 210], color: "#F1EBFF" },
+                    { name: "Day 4", data: [140, 130, 160, 180, 220, 170], color: "#E4D7FF" },
+                    { name: "Day 5", data: [130, 120, 100, 110, 160, 140], color: "#C7B2F2" },
+                    { name: "Day 6", data: [70, 60, 90, 100, 130, 110], color: "#9E7FE1" },
+                    { name: "Day 7", data: [50, 40, 70, 80, 90, 60], color: "#7C67A8" },
                 ]);
                 break;
             case '4':  
                 setChartSeries([
-                    { name: "Product A", data: [210, 230, 200, 220, 260, 190], color: "#F1EBFF" },
-                    { name: "Product B", data: [180, 160, 170, 150, 200, 140], color: "#E4D7FF" },
-                    { name: "Product C", data: [120, 110, 90, 100, 140, 110], color: "#C7B2F2" },
-                    { name: "Product D", data: [80, 70, 60, 50, 100, 80], color: "#9E7FE1" },
-                    { name: "Product E", data: [70, 50, 40, 30, 80, 60], color: "#7C67A8" },
+                    { name: "Day 3", data: [210, 230, 200, 220, 260, 190], color: "#F1EBFF" },
+                    { name: "Day 4", data: [180, 160, 170, 150, 200, 140], color: "#E4D7FF" },
+                    { name: "Day 5", data: [120, 110, 90, 100, 140, 110], color: "#C7B2F2" },
+                    { name: "Day 6", data: [80, 70, 60, 50, 100, 80], color: "#9E7FE1" },
+                    { name: "Day 7", data: [70, 50, 40, 30, 80, 60], color: "#7C67A8" },
                 ]);
                 break;
             case '5': 
                 setChartSeries([
-                    { name: "Product A", data: [240, 260, 220, 270, 310, 260], color: "#F1EBFF" },
-                    { name: "Product B", data: [200, 220, 190, 230, 280, 230], color: "#E4D7FF" },
-                    { name: "Product C", data: [170, 180, 150, 160, 210, 170], color: "#C7B2F2" },
-                    { name: "Product D", data: [120, 140, 100, 130, 160, 120], color: "#9E7FE1" },
-                    { name: "Product E", data: [80, 90, 60, 80, 120, 90], color: "#7C67A8" },
+                    { name: "Day 3", data: [240, 260, 220, 270, 310, 260], color: "#F1EBFF" },
+                    { name: "Day 4", data: [200, 220, 190, 230, 280, 230], color: "#E4D7FF" },
+                    { name: "Day 5", data: [170, 180, 150, 160, 210, 170], color: "#C7B2F2" },
+                    { name: "Day 6", data: [120, 140, 100, 130, 160, 120], color: "#9E7FE1" },
+                    { name: "Day 7", data: [80, 90, 60, 80, 120, 90], color: "#7C67A8" },
                 ]);
                 break;
             case '6':  
                 setChartSeries([
-                    { name: "Product A", data: [270, 310, 260, 330, 350, 320], color: "#F1EBFF" },
-                    { name: "Product B", data: [220, 240, 250, 270, 310, 290], color: "#E4D7FF" },
-                    { name: "Product C", data: [190, 200, 180, 220, 250, 210], color: "#C7B2F2" },
-                    { name: "Product D", data: [140, 160, 130, 150, 190, 160], color: "#9E7FE1" },
-                    { name: "Product E", data: [100, 110, 90, 110, 140, 120], color: "#7C67A8" },
+                    { name: "Day 3", data: [270, 310, 260, 330, 350, 320], color: "#F1EBFF" },
+                    { name: "Day 4", data: [220, 240, 250, 270, 310, 290], color: "#E4D7FF" },
+                    { name: "Day 5", data: [190, 200, 180, 220, 250, 210], color: "#C7B2F2" },
+                    { name: "Day 6", data: [140, 160, 130, 150, 190, 160], color: "#9E7FE1" },
+                    { name: "Day 7", data: [100, 110, 90, 110, 140, 120], color: "#7C67A8" },
                 ]);
                 break;
             default:

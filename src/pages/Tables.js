@@ -6,7 +6,7 @@ import TableComponent from '../components/ReusableComponents/TableComponent';
 import ArrowLeft from '../assets/images/arrow-square-left.svg'
 import ArrowRight from '../assets/images/arrow-square-right.svg'
 import { Modal } from 'antd';
-
+import {   Form, Input } from 'antd';
 const tableData = [
   {
     name: 'Ralph Edwards',
@@ -102,7 +102,12 @@ const handlePageChange = (key) => {
   console.log(key);
 
 }
-
+const onFinish = (values) => {
+  console.log('Success:', values);
+};
+const onFinishFailed = (errorInfo) => {
+  console.log('Failed:', errorInfo);
+};
 
 export default function Tables() {
   const [open, setOpen] = React.useState(false);
@@ -121,9 +126,20 @@ export default function Tables() {
                 </div>
                 <div className="d-flex flex-wrap">
                   <Modal title="Registration Form" centered open={open} onOk={() => setOpen(false)} onCancel={() => setOpen(false)} width={1000} >
-                    <p>some contents...</p>
-                    <p>some contents...</p>
-                    <p>some contents...</p>
+                    <Form name="basic" labelCol={{   span: 8, }} wrapperCol={{   span: 16, }} style={{ maxWidth: 600, }} initialValues={{ remember: true, }} onFinish={onFinish} onFinishFailed={onFinishFailed} autoComplete="off" >
+                      <Form.Item label="Username" name="username" rules={[ { required: false},]} >
+                        <Input />
+                      </Form.Item>
+                      <Form.Item label="Doctor" name="Doctor" rules={[   { required: false},]}>
+                        <Input />
+                      </Form.Item>
+                      <Form.Item label="MR.NO" name="MR.NO" rules={[   { required: false},]}>
+                        <Input />
+                      </Form.Item>
+                      <Form.Item label="Gender" name="Gender" rules={[   { required: false},]}>
+                        <Input />
+                      </Form.Item>
+                    </Form>
                   </Modal>
                   <img className='dashBoardIcon' src={DashboardIcons[0].src} alt={DashboardIcons[0].alt} onClick={() => setOpen(true)} />
                   <img className='dashBoardIcon' src={DashboardIcons[1].src} alt={DashboardIcons[1].alt} />
@@ -199,7 +215,7 @@ export default function Tables() {
         </div>
 
       </div>
-      <div className='patientlis-footer' style={{position:'fixed' , bottom :'0' ,width:'100vw' , marginBottom : '10px'}}>
+      <div className='patientlis-footer' style={{ position: 'fixed', bottom: '0', width: '100vw', marginBottom: '10px' }}>
         <div>
           <span className='totalpatientcount'>Total : 29</span>
         </div>

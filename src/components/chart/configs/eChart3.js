@@ -1,27 +1,27 @@
 const eChart3 = {
   series: [
     {
-      name: "Product A",
+      name: "Day 3",
       data: [150, 200, 100, 220, 300, 100],
       color: "#F1EBFF",
     },
     {
-      name: "Product B",
+      name: "Day 4",
       data: [200, 150, 150, 180, 250, 200],
       color: "#E4D7FF",
     },
     {
-      name: "Product C",
+      name: "Day 5",
       data: [100, 120, 80, 130, 150, 120],
       color: "#C7B2F2",
     },
     {
-      name: "Product D",
+      name: "Day 6",
       data: [50, 80, 60, 90, 120, 80],
       color: "#9E7FE1",
     },
     {
-      name: "Product E",
+      name: "Day 7",
       data: [50, 80, 60, 90, 120, 80],
       color: "#7C67A8",
     },
@@ -62,7 +62,7 @@ const eChart3 = {
       strokeDashArray: 2,
     },
     xaxis: {
-      categories: ["Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+      categories: ["Day 3", "Day 4", "Day 5", "Day 6", "Day 7"],
       labels: {
         show: false,
       },

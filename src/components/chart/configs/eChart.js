@@ -1,8 +1,8 @@
 const eChart = {
   series: [
     {
-      name: "Sales",
-      data: [450, 200, 100, 220, 500, 100],
+      name: "Patients",
+      data: [450, 200, 100, 220],
       color: "#F7F3FF",
     },
   ],
@@ -50,7 +50,7 @@ const eChart = {
           color:  '#4A5157'
         },
       },
-      categories: ["Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+      categories: ["<30>", "35-37", "38-40", "41-42" ],
       labels: {
         show: true,
         align: "right",
@@ -92,7 +92,7 @@ const eChart = {
     tooltip: {
       y: {
         formatter: function (val) {
-          return "$ " + val + " thousands";
+          return   val + " Patients";
         },
       },
     },

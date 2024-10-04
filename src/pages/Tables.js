@@ -6,20 +6,17 @@ import TableComponent from '../components/ReusableComponents/TableComponent';
 import ArrowLeft from '../assets/images/arrow-square-left.svg'
 import ArrowRight from '../assets/images/arrow-square-right.svg'
 import { Modal } from 'antd';
-import {   Form, Input } from 'antd';
+import { Form, Input } from 'antd';
 import { TableData } from '../Json/tableData';
 
-const tableData =TableData
+const tableData = TableData
 const DashboardIcons = [
   { src: addIcon, alt: 'addIcon' },
   { src: filterIcon, alt: 'filterIcon' },
 ];
 
 
-const handlePageChange = (key) => {
-  console.log(key);
 
-}
 const onFinish = (values) => {
   console.log('Success:', values);
 };
@@ -29,6 +26,15 @@ const onFinishFailed = (errorInfo) => {
 
 export default function Tables() {
   const [open, setOpen] = React.useState(false);
+  const [currentPage, setCurrentPage] = React.useState(1);
+  const pageSize = 10;
+  const startIndex = (currentPage - 1) * pageSize;
+  const endIndex = startIndex + pageSize;
+  const currentPageData = tableData.slice(startIndex, endIndex);
+  const handlePageChange = (newPage) => {
+    setCurrentPage(newPage);
+  };
+  const totalPages = Math.ceil(tableData.length / pageSize);
   return (
     <>
       <div className=' flex-column flex-grow-1'  >
@@ -44,17 +50,17 @@ export default function Tables() {
                 </div>
                 <div className="d-flex flex-wrap">
                   <Modal title="Registration Form" centered open={open} onOk={() => setOpen(false)} onCancel={() => setOpen(false)} width={1000} >
-                    <Form name="basic" labelCol={{   span: 8, }} wrapperCol={{   span: 16, }} style={{ maxWidth: 600, }} initialValues={{ remember: true, }} onFinish={onFinish} onFinishFailed={onFinishFailed} autoComplete="off" >
-                      <Form.Item label="Username" name="username" rules={[ { required: true},]} >
+                    <Form name="basic" labelCol={{ span: 8, }} wrapperCol={{ span: 16, }} style={{ maxWidth: 600, }} initialValues={{ remember: true, }} onFinish={onFinish} onFinishFailed={onFinishFailed} autoComplete="off" >
+                      <Form.Item label="Username" name="username" rules={[{ required: true },]} >
                         <Input />
                       </Form.Item>
-                      <Form.Item label="Doctor" name="Doctor" rules={[   { required: true},]}>
+                      <Form.Item label="Doctor" name="Doctor" rules={[{ required: true },]}>
                         <Input />
                       </Form.Item>
-                      <Form.Item label="MR.NO" name="MR.NO" rules={[   { required: true},]}>
+                      <Form.Item label="MR.NO" name="MR.NO" rules={[{ required: true },]}>
                         <Input />
                       </Form.Item>
-                      <Form.Item label="Gender" name="Gender" rules={[   { required: true},]}>
+                      <Form.Item label="Gender" name="Gender" rules={[{ required: true },]}>
                         <Input />
                       </Form.Item>
                     </Form>
@@ -103,21 +109,36 @@ export default function Tables() {
           </div>
 
           <div className='m-2 flex-grow-1' style={{ overflow: 'auto' }}>
-            <TableComponent data={tableData} />
+            <TableComponent data={currentPageData} />
             <div className='paginationDiv'>
-              <span>Showing 1 to 3 of 10 entries</span>
+              <span>Showing {currentPage} to {totalPages} of {tableData.length} entries</span>
               <nav aria-label="Page navigation example">
                 <ul className="pagination justify-content-end">
-                  <li className="page-item disabled">
-                    <button className="page-link" disabled aria-label="Previous">
+                  <li className="page-item">
+                    <button
+                      className="page-link"
+                      onClick={() => handlePageChange(currentPage - 1)}
+                      disabled={currentPage === 1}
+                    >
                       <img src={ArrowLeft} alt="Previous" />
                     </button>
                   </li>
-                  <li className="page-item"><button className="page-link" onClick={() => handlePageChange(1)}>1</button></li>
-                  <li className="page-item"><button className="page-link" onClick={() => handlePageChange(2)}>2</button></li>
-                  <li className="page-item"><button className="page-link" onClick={() => handlePageChange(3)}>3</button></li>
+                  {[...Array(totalPages).keys()].map((page) => (
+                    <li key={page} className="page-item">
+                      <button
+                        className="page-link"
+                        onClick={() => handlePageChange(page + 1)}
+                      >
+                        {page + 1}
+                      </button>
+                    </li>
+                  ))}
                   <li className="page-item">
-                    <button className="page-link" onClick={() => handlePageChange('next')} aria-label="Next">
+                    <button
+                      className="page-link"
+                      onClick={() => handlePageChange(currentPage + 1)}
+                      disabled={currentPage === totalPages}
+                    >
                       <img src={ArrowRight} alt="Next" />
                     </button>
                   </li>
@@ -135,7 +156,7 @@ export default function Tables() {
       </div>
       <div className='patientlis-footer' style={{ position: 'fixed', bottom: '0', width: '100vw', marginBottom: '10px' }}>
         <div>
-          <span className='totalpatientcount'>Total : 29</span>
+          <span className='totalpatientcount'>Total : {tableData.length}</span>
         </div>
 
       </div>
